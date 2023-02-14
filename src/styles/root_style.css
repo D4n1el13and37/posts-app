@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  margin: 0 auto;
+
+  width: 800px;
+
+  display: flex;
+  justify-content: center;
+}
+
+#main {
+  margin: 0 auto;
+
+  width: 520px;
+  min-height: 250px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+#heading {
+  font-size: 40px;
+  font-family: "Poppins Semi", sans-serif;
+}
+
+.description {
+  margin: auto;
+  margin-bottom: 24px;
+
+  width: 520px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.into__posts {
+  padding: 4px 12px;
+
+  font-size: 14px;
+
+  border-radius: 24px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.into__posts a {
+  text-decoration: none;
+
+  color: aliceblue;
+}
+
+.into__posts:hover {
+  border: 2px solid #384ad3;
+
+  background-color: #384ad3;
+}

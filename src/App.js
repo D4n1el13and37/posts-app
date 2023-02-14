@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+/*
+ * Сделай приложение на реакте
+- которое при запуске получает список постов __нужно будет делать с Fetch 
+- на пост можно нажать и перейти на страницу с постом, добавить роутинг REACT ROUTER DOM на пост, 
+при нажатии на конкретный пост тебя переводит на страницу этого поста
+- пост в списке можно удалить 
+Так же вызовы для получения данных с API JSONPlaceholder-a нужно будет делать с Use Fetch - внутри компонентов)
+Все написано в доке реакта
+ */
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+//1 что нужно сделать, получить посты с помощью useFetch?
+/* 
+потом организовать роутинг по переходу при нажатии на пост 
+что бы генерировался (или просто открывался ?) пост по которому кликнули ...posts/id
+*/
 
-export default App;
+/*
+ *
+ * 1 роут это домашняя страница
+ * 2 роут это старница с постами
+ * 3 роут это страница с конкретным постом
+ *
+ */

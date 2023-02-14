@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 50%;
+
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+}
+
+.post {
+  margin: 0 auto;
+  padding: 20px;
+
+  width: 640px;
+
+  border: 2px solid rgba(0, 0, 80, 0.2);
+  border-radius: 32px;
+}
+
+.post h3 {
+  margin-bottom: 20px;
+
+  font-size: 26px;
+}
