@@ -2,44 +2,26 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/post_style.css";
 
-/**
- * TODO:
- *
- * - PATCH Post
- *  from -> onSubmit -> patch post -> render UI
- *
- * - DELETE Post
- *  button onClick -> delete post -> notify user
- */
-
 export default function Post() {
   const { id } = useParams();
 
   // Loading deection
   const [loading, setLoading] = useState(false);
 
-  /**
-   * post = object | undefined
-   */
+  //post = object | undefined
   const [post, setPost] = useState(undefined);
 
-  /**
-   * show us clicked button edit or no, for render editing form
-   */
+  //show us clicked button edit or no, for render editing form
   const [isEdited, setIsEdited] = useState(false);
 
-  //for changing post
+  //for save as  changing post
   let newTitle = "";
   let newBody = "";
 
-  function edited() {
-    isEdited ? setIsEdited(false) : setIsEdited(true);
-  }
-
+  //handlers for change title and body
   function handleTitleChange(event) {
     newTitle = event.target.value;
   }
-
   function handleBodyChange(event) {
     newBody = event.target.value;
   }
@@ -58,6 +40,7 @@ export default function Post() {
       .finally(() => setLoading(false));
   }, [id]);
 
+  //handler for
   const handleSumbit = (event) => {
     event.preventDefault();
     setPost({ title: newTitle, body: newBody });
@@ -74,12 +57,7 @@ export default function Post() {
           <h3>{post.title}</h3>
           <p>{post.body}</p>
           <div className="post__buttons">
-            {isEdited ? (
-              <button onClick={() => edited()}>Save</button>
-            ) : (
-              <button onClick={() => edited()}>Edit</button>
-            )}
-
+            <button onClick={() => setIsEdited(true)}>Edit</button>
             <button
               onClick={() =>
                 setPost({
